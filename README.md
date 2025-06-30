@@ -9,7 +9,7 @@ Mila is your not-so-friendly, dirty‑mouthed Discord companion built with `disc
 - 🎨 **Image Generation** — `!generate` (WebUI 1111)
 - 🎲 **Dice Rolling & Coin Flipping** — `!roll`, `!flip`
 - 🧠 **Snarky Facts** — `!fact`, `!til`
-- 🗣️ **Voice + Image Delivery** — `!felon`
+- 🗣️ **Personalized User Roasts** — `!felon` (audio clip + image targeting a specific user)
 - 📡 **Twitch Stream Tracking** — `!nextstream`
 - 💬 **Modular Command System** — Clean handler architecture
 - 😈 **Mouth of a sailor** — Mila doesn’t sugarcoat. Ever.
@@ -27,10 +27,10 @@ Mila is your not-so-friendly, dirty‑mouthed Discord companion built with `disc
 
 3. **Prepare your secrets**  
    In `main.py`, fill in:  
-       DISCORD_TOKEN = 'your_discord_token'  
-       TWITCH_TOKEN  = 'your_twitch_oauth_token'  
-       TWITCH_CLIENT_ID     = 'your_client_id'  
-       TWITCH_CLIENT_SECRET = 'your_client_secret'
+       TOKEN = 'DISCORD_TOKEN_HERE'  
+       TWITCH_TOKEN  = 'TWITCH_TOKEN_HERE'  
+       TWITCH_CLIENT_ID     = 'TWITCH_CLIENT_ID_HERE'  
+       TWITCH_CLIENT_SECRET = 'TWITCH_CLIENT_SECRET_HERE'
 
 4. **Launch Mila**  
        python main.py
@@ -71,7 +71,7 @@ Mila is your not-so-friendly, dirty‑mouthed Discord companion built with `disc
 
 ## 🧨 Notes
 
-- Mila does **not** join voice chats. She sends **voice messages** instead.
+- Mila does **not** join voice chats. She sends **voice messages** of pre-created audio files instead.
 - All voice and image files live in `sources/`.
 - Customize her personality through the various `*.txt` openers.
 
