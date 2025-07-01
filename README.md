@@ -6,50 +6,57 @@ Mila is your not-so-friendly, dirty‑mouthed Discord companion built with `disc
 
 ## 💣 Features
 
-- 🎨 **Image Generation** — `!generate` (WebUI 1111)
-- 🎲 **Dice Rolling & Coin Flipping** — `!roll`, `!flip`
-- 🧠 **Snarky Facts** — `!fact`, `!til`
-- 🗣️ **Personalized User Roasts** — `!felon` (audio clip + image targeting a specific user)
-- 📡 **Twitch Stream Tracking** — `!nextstream`
-- 💬 **Modular Command System** — Clean handler architecture
-- 😈 **Mouth of a sailor** — Mila doesn’t sugarcoat. Ever.
+- **Image generation** (`!generate`)
+- **Audio and image responses**
+- **Dice roll** (`!roll`)
+- **Coin flip** (`!flip`)
+- **Greetings and facts** (`!hello`, `!fact`, `!til`)
+- **Dirty-mouthed remarks** (`!felon`)
+- **Twitch stream info** (`!nextstream`)
+- **Twitch schedule** (`!schedule`)
+- **Mocking users with Balatro flair** (`!mumios`)
+- Modular command handler structure
 
 ---
 
 ## ⚙️ Getting Mila Running
 
-1. **Clone this menace**  
-       git clone https://github.com/HanTheDestroyer/Mila_Discord_Bot.git  
-       cd Mila_Discord_Bot
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/HanTheDestroyer/Mila_Discord_Bot.git
+   cd Mila_Discord_Bot
+   ```
 
-2. **Install her dependencies**  
-       pip install -r requirements.txt
+2. **Install dependencies:**
+   ```sh
+   pip install -r requirements.txt
+   ```
 
-3. **Prepare your secrets**  
-   In `main.py`, fill in:  
-       TOKEN = 'DISCORD_TOKEN_HERE'  
-       TWITCH_TOKEN  = 'TWITCH_TOKEN_HERE'  
-       TWITCH_CLIENT_ID     = 'TWITCH_CLIENT_ID_HERE'  
-       TWITCH_CLIENT_SECRET = 'TWITCH_CLIENT_SECRET_HERE'
+3. **Configure credentials:**
+   Edit the provided `credentials.py` file and fill in your Discord and Twitch tokens.
 
-4. **Launch Mila**  
-       python main.py
+4. **Run the bot:**
+   ```sh
+   python main.py
+   ```
 
 ---
 
 ## 🧾 Available Commands
 
-| Command       | Description                                       |
-|---------------|---------------------------------------------------|
-| `!hello`      | Mila says hi. You’ll regret asking.               |
-| `!flip`       | Flips a coin with some sass.                      |
-| `!roll`       | Rolls a die. Might insult your luck.              |
-| `!fact`       | Useless facts delivered with attitude.            |
-| `!til`        | “Today I Learned” — because you need it.          |
-| `!felon`      | Drops audio from ConvictedFelon77 — mock included |
-| `!generate`   | Image generation via WebUI (port 1111 required)   |
-| `!nextstream` | Twitch stream info (credentials needed)           |
-| `!ping`       | Pong. Simple, but Mila makes it personal.         |
+| Command        | Description                                   |
+|----------------|-----------------------------------------------|
+| `!generate`    | Generate images                               |
+| `!hello`       | Mila says hello                               |
+| `!flip`        | Flip a coin                                   |
+| `!roll`        | Roll a dice                                   |
+| `!ping`        | Ping response                                 |
+| `!til`         | Today I Learned fact                          |
+| `!fact`        | Random fact                                   |
+| `!felon`       | Dirty-mouthed remark                          |
+| `!nextstream`  | Twitch stream info                            |
+| `!schedule`    | Retrieve Twitch stream schedule               |
+| `!mumios`      | Mock user with bad words & Balatro image      |
 
 ---
 
