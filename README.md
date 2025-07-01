@@ -62,17 +62,20 @@ Mila is your not-so-friendly, dirty‑mouthed Discord companion built with `disc
 
 ## 🗂️ Project Structure
 
-    Mila_Discord_Bot/
-    ├── handlers/          # Command-specific logic
-    │   └── handle_*.py    # Modular command files
-    ├── sources/           # Facts, audio, images, text openers
-    │   ├── facts.txt
-    │   ├── flip_openers.txt
-    │   ├── felon_barbie.mp3
-    │   └── ...
-    ├── main.py            # Entry point
-    ├── requirements.txt   # Dependencies
-    └── README.md          # You are here
+Mila_Discord_Bot/
+├── handlers/              # Command-specific logic
+│   └── handle_*.py        # Modular command files
+├── sources/               # Static resources used by commands
+│   ├── audio/             # Audio clips
+│   │   └── felon_barbie.mp3
+│   ├── images/            # GIFs, PNGs, etc.
+│   │   └── mumios.gif
+│   ├── facts.txt
+│   ├── flip_openers.txt
+│   └── ...
+├── main.py                # Entry point
+├── requirements.txt       # Dependencies
+└── README.md              # You are here
 
 ---
 
