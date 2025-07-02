@@ -10,14 +10,15 @@ from handlers.til import handle_til
 from handlers.fact import handle_fact
 from handlers.felon import handle_felon
 from handlers.nextstream import handle_nextstream
+from handlers.mumios import handle_mumios
+from handlers.gif import handle_gif
+from handlers.schedule import handle_schedule
+from credentials import *
 
 intents = discord.Intents.default()
 intents.message_content = True
 
-TOKEN = 'DISCORD_TOKEN_HERE'
-TWITCH_TOKEN = "TWITCH_TOKEN_HERE"
-TWITCH_CLIENT_ID = "TWITCH_CLIENT_ID_HERE"
-TWITCH_CLIENT_SECRET = 'TWITCH_CLIENT_SECRET_HERE'
+
 
 COMMAND_HANDLERS = {
     '!generate': handle_generate,
@@ -28,7 +29,10 @@ COMMAND_HANDLERS = {
     '!til': handle_til,
     '!fact': handle_fact,
     '!felon': handle_felon,
-    '!nextstream': handle_nextstream
+    '!nextstream': handle_nextstream,
+    '!mumios': handle_mumios,
+    '!gif': handle_gif,
+    '!schedule': handle_schedule,
 }
 
 class Mila(discord.Client):
@@ -45,8 +49,10 @@ class Mila(discord.Client):
         for cmd, handler in COMMAND_HANDLERS.items():
             if content.startswith(cmd):
                 # nextstream needs Twitch credentials
-                if cmd == '!nextstream':
+                if cmd == '!nextstream' or cmd == '!schedule':
                     await handler(message, TWITCH_TOKEN, TWITCH_CLIENT_ID)
+                elif cmd == '!gif':
+                    await handler(message, TENOR_API_KEY)
                 else:
                     await handler(message)
                 break
