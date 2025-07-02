@@ -2,7 +2,7 @@ import numpy as np
 import os
 
 async def handle_hello(message):
-    greetings_path = 'C:/Users/han/Documents/Projects/Mila/sources/greetings.txt'
+    greetings_path = 'sources/greetings.txt'
     os.makedirs(os.path.dirname(greetings_path), exist_ok=True)
     try:
         with open(greetings_path, 'r', encoding='utf-8') as f:

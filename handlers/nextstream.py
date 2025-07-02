@@ -5,7 +5,7 @@ import time
 async def handle_nextstream(message, twitch_token, twitch_client_id):
     parts = message.content.strip().split()
     if len(parts) < 2:
-        await message.channel.send("Please provide a Twitch username. Usage: `!schedule username`")
+        await message.channel.send("Please provide a Twitch username. Usage: `!nextstream username`")
         return
 
     user_login = parts[1]

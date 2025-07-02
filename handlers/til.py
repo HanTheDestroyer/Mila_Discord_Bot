@@ -1,7 +1,8 @@
 import os
+import sys
 
 async def handle_til(message):
-    facts_database_path = 'C:/Users/han/Documents/Projects/Mila/sources/facts.txt'
+    facts_database_path = 'facts.txt'
     os.makedirs(os.path.dirname(facts_database_path), exist_ok=True)
     fact = message.content[4:].strip()
     if not fact:
